@@ -11,29 +11,29 @@
             controller: SearchComponentController,
             controllerAs: 'searchComponentControllerVm',
             restrict: 'E',
-            scope: {} //Isolated scope
-
-            //El tipo de cada select lo puedo agregar con el compile
-            //Tengo el array y le meto el tipo por el compile
-            //Genial
+            scope: {}, //Isolated scope
+            templateUrl: "components/bv-ui/search-component/search-component.directive.html"
         };
 
         /* @ngInject */
-        function SearchComponentController($scope, SearchComponentFactory) {
+        function SearchComponentController(SearchComponentFactory) {
             //Se puede config
             var vm = this;
+
             //Data from provider
             vm.locationData = SearchComponentFactory.getLocationData();
             vm.types = SearchComponentFactory.getTypes();
-
-            //listeners
+            vm.models=[1, 1];
             vm.selectChanged = selectChanged;
-            vm values = [];
+            //consoling properties
+            console.log(vm.locationData);
+            console.log(vm.types);
 
-            function selectChanged(type, value) {
+            function selectChanged(type, local) {
+                console.log("Hola");
+                console.log(type, local);
                 //Acá obtengo el
             }
-
         };
     }
 })();

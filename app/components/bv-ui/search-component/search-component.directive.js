@@ -30,9 +30,12 @@
             console.log(vm.types);
 
             function selectChanged(type, local) {
-                console.log("Hola");
+                var indexSelect = vm.types.indexOf(type);
+                console.log(vm.types, type);
                 console.log(type, local);
-                //Acá obtengo el
+                console.log("index");
+                console.log(indexSelect);
+
             }
         };
     }

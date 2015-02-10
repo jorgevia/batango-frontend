@@ -1,9 +1,9 @@
 <select
-    ng-repeat="select in searchComponentControllerVm.types"
-    type="{{select}}"
-    ng-options="local.id as local.name for local in searchComponentControllerVm.locationData['{{select}}']"
+    ng-repeat="type in searchComponentControllerVm.types"
+    type="{{type}}"
+    ng-options="local.id as local.name for local in searchComponentControllerVm.locationData['{{type}}']"
     ng-model="local"
-    ng-change="searchComponentControllerVm.selectChanged(select, local)">
+    ng-change="searchComponentControllerVm.selectChanged(type, local)">
     <option style="display:none" value="">select a region</option>
 </select>
 

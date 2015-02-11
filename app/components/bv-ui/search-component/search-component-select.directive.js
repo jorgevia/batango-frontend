@@ -8,7 +8,6 @@
     /* @ngInject */
     function bvSearchComponentSelect() {
         var directive = {
-            require: 'bvSearchComponent',
             restrict: 'E',
             scope: {
                 type: '@',
